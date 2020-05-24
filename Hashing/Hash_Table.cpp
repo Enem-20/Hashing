@@ -1,4 +1,5 @@
 #include "Hash_Table.h"
+#include "Math.h"
 
 template<class Key, class Value>
 void Hash_Table<Key, Value>::Set_Size(int size)
