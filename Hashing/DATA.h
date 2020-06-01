@@ -1,18 +1,15 @@
 #pragma once
 
-struct Determinate
-{
-
-};
-
-struct Name
-{
-
-};
+#include <string>
 
 class DATA
 {
 public:
+	DATA();
 
+	int countD;
+	int countN;
+
+	string GraphDesk;
 };
 
