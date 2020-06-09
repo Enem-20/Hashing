@@ -23,6 +23,18 @@ Value& Hash_Table<Key, Value>::operator[](const Key& index)
 }
 
 template<class Key, class Value>
+const Value& Hash_Table<Key, Value>::operator[](const Key& index) const
+{
+	return Table[index];
+}
+
+template<class Key, class Value>
+Value& Hash_Table<Key, Value>::operator=(Value val)
+{
+	return this = val;
+}
+
+template<class Key, class Value>
 void Hash_Table<Key, Value>::Insert(Key index, Value val)
 {
 	//Hash function needed here
@@ -48,9 +60,19 @@ Value Hash_Table<Key, Value>::Find(Value val)
 }
 
 template<class Key, class Value>
-void Hash_Table<Key, Value>::Hash(Key key)
+void Hash_Table<Key, Value>::Hash(Key key, Value val)
 {
-
+	int resultKey;
+	int Buf = key;
+	int sub = 10;
+	while(Buf > 0)
+	{
+		Buf %= sub;
+		resultKey += Buf * 2;
+		sub *= 10;
+		Buf = key;
+	}
+	
 }
 
 template<class Key, class Value>

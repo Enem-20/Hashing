@@ -18,7 +18,7 @@ public:
 	void Set_Size(int size);
 	void Insert(Key index, Value val);
 	Value Find(Value val);
-	void Hash(Key key);
+	void Hash(Key key, Value val);
 
 private:
 	int size;
@@ -26,6 +26,8 @@ private:
 	
 	Value* Table;
 	Value& operator[](const Key& index);
+	const Value& operator[](const Key& index) const;
+	Value& operator=(Value val);
 
 	int Search_Position(long key, Value val);
 };

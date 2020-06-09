@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	
+	Hash_Table<int, int> hash;
 
 	return 0;
 }

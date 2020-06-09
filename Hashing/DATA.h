@@ -1,15 +1,24 @@
 #pragma once
 
+#include <fstream>
 #include <string>
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 class DATA
 {
 public:
 	DATA();
+	~DATA();
+	
+	void Read();
+	void clear();
+	int** GetDesk();
 
-	int countD;
-	int countN;
-
-	string GraphDesk;
+private:
+	int** GraphDesk;
+	bool** visited;
 };
 
